@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         if let text = self.textField.text, let number = Int(text) {
             resultLabel.text = "\(pow(2, number))"
         } else {
-            resultLabel.text = "Enter number"
+            resultLabel.text = "Введите число"
         }
 
         }
