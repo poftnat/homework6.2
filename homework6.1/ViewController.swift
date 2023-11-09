@@ -9,11 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var numberTextfield: UITextField!
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    @IBAction func calculateButton(_ sender: Any) {
+        if let text = self.textField.text, let number = Int(text) {
+            resultLabel.text = "\(pow(2, number))"
+        } else {
+            resultLabel.text = "Enter number"
+        }
+
+        }
     }
 
-
-}
 
